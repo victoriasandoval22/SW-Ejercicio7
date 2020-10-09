@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palíndromo</title>
+    <link rel="shortcut icon" type="image/png" href="vicky.png" />
+
+    <script>
+        function iniciar(){
+            inverso = "";
+            valor = document.getElementById("palabra").value;
+            palabra = valor.length;
+            for(var i=palabra; i>=0; i--){
+                inverso = inverso + valor.charAt(i);
+            }
+    
+            if(valor === inverso){
+                alert(valor + ": es palindromo");
+            }
+            else{
+                alert(valor + ": no es palindromo");
+            }
+        }
+    </script> 
+
+</head>
+<body >
+    <form  name="Palindromo" method="GET">
+        <label>Deme una palabra:</label>
+        <input type="text"  id="palabra">
+        <input type="submit" value="Verificar" onclick="iniciar()">
+
+    </form>
+
+
+</body>
+</html>
